@@ -16,6 +16,7 @@ let maxRandom = 100;
 let timeToHide = 5 * 1000;
 
 const eleContainer = document.querySelector('.container');
+const eleText = document.querySelector('.text');
 
 // determinare i 5 numeri random
 let arrRandoms = getArrRandomIntegers(nRandoms, minRandom, maxRandom);
@@ -24,7 +25,7 @@ console.log(arrRandoms);
 // mettere i numeri random in pagina 
 //eleNumbers.innerHTML = arrRandoms // converte l'array in stringa prima di metterlo nell'HTML
 for (let i = 0; i < arrRandoms.length; i++) {
-    eleContainer.innerHTML += `<div class="number">${arrRandoms[i]}</div>`
+    eleContainer.innerHTML += `<div class="number">${arrRandoms[i]}</div>`;
 }
 
 // registriamo la funzione che deve essere eseguita dopo il tempo stabilito
@@ -66,11 +67,11 @@ function verify(arr1, arr2) {
 function score(arrValues, arrIndexes) {
     let msg;
     if (arrIndexes.length === 0) {
-        msg = 'Non hai indovinato nessun numero';
+        eleText.innerHTML = 'Non hai indovinato nessun numero!';
     } else if (arrIndexes.length === arrValues.length) {
-        msg = 'Hai indovinati tutti i numeri';
+        eleText.innerHTML = 'Complimenti, hai indovinati tutti i numeri!';
     } else {
-        msg = `Hai indovinato ${arrIndexes.length} numeri: i numeri nelle posizioni: ${arrIndexes.join(' - ')}`;
+        eleText.innerHTML = `Hai indovinato ${arrIndexes.length} numeri: i numeri nelle posizioni: ${arrIndexes.join(' - ')}`;
     }
     console.log(msg);
 }

@@ -14,6 +14,13 @@ body {
     justify-content: center;
 }
 
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container {
     background-color: #8B8DB9;
     border: 2px solid #FCFCD4;
@@ -25,8 +32,25 @@ body {
     align-items: center;
 }
 
+.text-box {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    color: #FCFCD4;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
 .number {
-    
+    color: #FCFCD4;
+    font-size: xx-large;
+    text-transform: uppercase;
 }
 
 .hidden {
