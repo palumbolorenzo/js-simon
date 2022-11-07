@@ -9,23 +9,24 @@ html {
 }
 
 body {
-    background-color: rgb(81, 81, 81);
-}
-
-main {
+    background-color: #A6ACF7;
     display: flex;
     justify-content: center;
 }
 
 .container {
-    background-color: rgb(157, 157, 157);
-    border: 2px solid gold;
+    background-color: #8B8DB9;
+    border: 2px solid #FCFCD4;
     width: 500px;
     height: 200px;
     margin-top: calc(60vh - 200px);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.number {
+    
 }
 
 .hidden {
